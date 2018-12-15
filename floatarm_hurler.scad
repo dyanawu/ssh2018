@@ -1,25 +1,22 @@
 use <MCAD/shapes/2Dshapes.scad>
 include <MCAD/units/metric.scad>
-include <floatarm_arm.scad>
+use <floatarm_arm.scad>
 
-hurler_d = [20,20,10];
-hurler_r = 10;
-hurler_a = 45;
-
-
-
-module counterweight()
-{
-	
-}
+hurler_od = 35;
+hurler_id = 33;
+hurler_w = 30;
 
 module hurler() {
-	ccube(hurler_d, center = X+Z);
-	translate([0,hurler_d[1],0]) {
-		rotate([hurler_a,0,0]) {
-			ccube(hurler_d, center = X);
+rotate([0,-90,0]) {
+
+	rotate([0,0,-45]) {
+		difference() {
+			sphere(r = hurler_od/2, center = true, $fn = 60);
+			translate([hurler_od-hurler_id,hurler_od-hurler_id,0]) {
+				#sphere(r = hurler_id/2, center = true, $fn = 60);
+			}
 		}
-	}
 }
 
-hurler();
+	}
+}
