@@ -1,7 +1,8 @@
 use <MCAD/shapes/2Dshapes.scad>
 include <MCAD/units/metric.scad>
+include <floatarm_arm.scad>
 
-hurler_d = [30,20,10];
+hurler_d = [20,20,10];
 hurler_r = 10;
 hurler_a = 45;
 

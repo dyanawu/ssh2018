@@ -3,7 +3,7 @@ include <MCAD/units/metric.scad>
 
 arm_d = [10,70,10];
 pin_l = 30;
-pin_od = 4;
+pin_od = 3;
 fulcrum_dist = 30;
 cweight_dist = 5;
 
@@ -31,3 +31,4 @@ module pin_hole() {
 	}
 }
 
+arm();
